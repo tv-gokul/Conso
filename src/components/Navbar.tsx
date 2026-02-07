@@ -11,7 +11,6 @@ const NAV_ITEMS = [
     { name: "About", href: "/#about" },
     { name: "Events", href: "/events" },
     { name: "Speakers", href: "/speakers" },
-    { name: "Sponsors", href: "/sponsors" },
     { name: "Team", href: "/team" },
     { name: "Contact", href: "#contact" },
 ];
