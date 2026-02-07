@@ -126,6 +126,16 @@ const allEvents = [
         logo: "/pitchinthecar-DyolDNEq.webp",
         link: "https://unstop.com/o/CGW3AvD?lb=6vnimjjW&utm_medium=Share&utm_source=aryansin7258&utm_campaign=Competitions"
     },
+    {
+        title: "Pitch Perfect",
+        category: "Pitch",
+        description: "A rapid-fire pitch event focused on clarity, confidence, and idea impact.",
+        date: "TBA",
+        location: "VNIT Nagpur",
+        image: "from-fuchsia-500/20 to-purple-500/20",
+        logo: null,
+        link: "https://forms.gle/kyAMkdXzezwa5dFi6"
+    },
 ];
 
 export default function EventsPage() {
@@ -161,15 +171,17 @@ export default function EventsPage() {
                                 </div>
 
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="relative h-12 w-24 shrink-0">
-                                        <Image
-                                            src={event.logo}
-                                            alt={`${event.title} logo`}
-                                            fill
-                                            className="object-contain"
-                                            sizes="96px"
-                                        />
-                                    </div>
+                                    {event.logo ? (
+                                        <div className="relative h-12 w-24 shrink-0">
+                                            <Image
+                                                src={event.logo}
+                                                alt={`${event.title} logo`}
+                                                fill
+                                                className="object-contain"
+                                                sizes="96px"
+                                            />
+                                        </div>
+                                    ) : null}
                                     <h3 className="text-3xl font-bold group-hover:text-conso-red transition-colors">
                                         {event.title}
                                     </h3>

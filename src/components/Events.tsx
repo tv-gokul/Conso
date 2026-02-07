@@ -9,6 +9,7 @@ const events = [
         description: "Real-world challenges, calculated risks, and competition to become influential leaders.",
         date: "Consortium '26",
         logo: "/ceo-CiTAFyd_.webp",
+        link: "https://ceo.ecellvnit.org/",
     },
     {
         title: "IPL Auction",
@@ -16,6 +17,7 @@ const events = [
         description: "Build the strongest team with smart bidding, analytics, and prediction.",
         date: "Consortium '26",
         logo: "/iplauction-CM6tDsO9.webp",
+        link: "https://ipl.ecellvnit.org/",
     },
     {
         title: "Jugaad",
@@ -23,6 +25,7 @@ const events = [
         description: "Teams receive Rs 100 to maximize through creative ideation, bargaining, and financial management.",
         date: "Consortium '26",
         logo: "/jugaad-Cwv8sXek.webp",
+        link: "https://jugaad.ecellvnit.org/",
     },
     {
         title: "Wallstreet",
@@ -30,6 +33,7 @@ const events = [
         description: "A stock trading competition to test managerial skills and market intuition.",
         date: "Consortium '26",
         logo: "/wallstreet-BjgcvuFk.webp",
+        link: "https://wallstreet.ecellvnit.org/",
     },
     {
         title: "StartUp Conclave",
@@ -37,6 +41,7 @@ const events = [
         description: "A national business plan competition that turns ideas into successful ventures.",
         date: "Consortium '26",
         logo: "/suc-Bc2Eb1A0.webp",
+        link: "https://startupconclave.ecellvnit.org/",
     },
     {
         title: "Startup Expo",
@@ -44,6 +49,7 @@ const events = [
         description: "A national exhibition for startups to showcase innovations and network with investors.",
         date: "Consortium '26",
         logo: "/expo-BuSr9Ws3.webp",
+        link: "https://expo.ecellvnit.org/",
     },
 ];
 
@@ -57,8 +63,11 @@ export default function Events() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {events.map((event, index) => (
-                        <div
+                        <a
                             key={index}
+                            href={event.link}
+                            target="_blank"
+                            rel="noreferrer"
                             className="group relative p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden hover:border-conso-red/50 transition-colors duration-500"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-conso-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -97,7 +106,7 @@ export default function Events() {
                                     {event.date}
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
